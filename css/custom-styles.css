@@ -1,14 +1,14 @@
-@font-face {font-family: "OpenSans Regular";src: url("../fonts/OpenSansRegular.ttf");}
 @font-face {font-family: "OpenSans Semibold";src: url("../fonts/OpenSansSemiBold.ttf");}
-@font-face {font-family: "OpenSans Light";src: url("../fonts/OpenSansLight.ttf");}
 @font-face {font-family: "Muse-100";src: url("../fonts/MuseoSansCyrl-100.otf");}
 @font-face {font-family: "Muse-300";src: url("../fonts/MuseoSansCyrl-300.otf");}
 @font-face {font-family: "Muse-500";src: url("../fonts/MuseoSansCyrl-500.otf");}
 @font-face {font-family: "Muse-700";src: url("../fonts/MuseoSansCyrl-700.otf");}
 @font-face {font-family: "HelveticaNeueCyr Roman";src: url("../fonts/HelveticaNeueCyr-Roman.otf");}
 @font-face {font-family: "HelveticaNeueCyr Light";src: url("../fonts/HelveticaNeueCyr-Light.otf");}
+@font-face {font-family: "HelveticaNeueCyr Bold";src: url("../fonts/HelveticaNeueCyr-Bold.otf");}
 @font-face {font-family: "Roboto Condensed Regular";src: url("../fonts/RobotoCondensed-Regular.ttf");}
 @font-face {font-family: "Roboto Light";src: url("../fonts/Roboto-Light.ttf");}
+@font-face {font-family: "Roboto Bold";src: url("../fonts/Roboto-Bold.ttf");}
 /* general rules */
 * {
     margin: 0;
@@ -170,10 +170,11 @@ nav {
     height: 23px;
     position: absolute;
     right: 30px;
-    top: 20px;
+    top: 75px;
     background: url('../images/icon-nav.png') no-repeat center;
     background-size: cover;
     cursor: pointer;
+    z-index: 1;
 }
 nav ul li {
     margin: 0 10px;
@@ -267,7 +268,7 @@ nav ul li a:hover {
     vertical-align: top;
     width: 230px;
     height: auto;
-    min-height: 385px;
+    min-height: 400px;
     border: 1px solid #65caff;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -324,7 +325,7 @@ nav ul li a:hover {
     display: inline-block;
     font-family: "Muse-700", sans-serif;
     font-size: 17px;
-    padding: 15px 15px 5px 15px;
+    padding: 15px 12px 5px 12px;
 }
 .course-card .title:hover {
     text-decoration: underline;
@@ -332,7 +333,7 @@ nav ul li a:hover {
 .course-card .text {
     font-family: "HelveticaNeueCyr Roman", sans-serif;
     font-size: 13px;
-    padding: 5px 15px 15px 15px;
+    padding: 5px 12px 15px 12px;
 }
 .course-card .course-card-footer {
     display: block;
@@ -353,13 +354,13 @@ nav ul li a:hover {
     color: #7b7b7b;
 }
 .course-card .duration-block .duration {
-    margin-left: 15px;
+    margin-left: 12px;
     padding-right: 5px;
     border-right: 1px solid #7b7b7b;
 }
 .course-card .price-block {
     position: absolute;
-    left: 15px;
+    left: 12px;
     bottom: 15px;
 }
 .course-card .old-price, .course-card .current-price {
@@ -386,7 +387,7 @@ nav ul li a:hover {
     background: #ff4d3f;
     color: #ffffff;
     position: absolute;
-    right: 15px;
+    right: 12px;
     bottom: 15px;
     padding: 0;
     margin: 0;
@@ -425,21 +426,90 @@ nav ul li a:hover {
 .courses>button span {
     display: none;
     line-height: 50px;
-    font-family: "HelveticaNeueCyr Roman", sans-serif;
-    font-weight: 600;
+    font-family: "HelveticaNeueCyr Bold", sans-serif;
     color: #ffffff;
     text-transform: uppercase;
     padding-right: 25px;
 }
-.courses>button .show {
-    display: block;
-}
-.courses>button.active .hide {
+.courses>button .visible {
     display: block;
 }
 .courses>button.active:after {
     background: url('../images/sprite-arrows.png') no-repeat left center;
     background-size: cover;
+}
+
+/* banner */
+.banner {
+    background: #65caff;
+    padding: 35px 0;
+    margin-top: 5%;
+    position: relative;
+}
+.banner .block-content {
+    max-width: 860px;
+    padding: 40px 0 70px 90px;
+    background: #ffffff;
+    text-align: left;
+}
+.girl-image {
+    width: 100%;
+    padding-top: 475px;
+    background: url('../images/new-girl.png') no-repeat 70% center;
+    background-size: auto 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.banner .title {
+    font-family: "HelveticaNeueCyr Bold", sans-serif;
+    font-size: 49px;
+    color: #df2008;
+}
+.banner .text {
+    display: inline-block;
+    width: 230px;
+    font-family: "Roboto Condensed Regular", sans-serif;
+    font-size: 30px;
+}
+.banner .percent {
+    display: inline-block;
+    font-family: "Roboto Bold", sans-serif;
+    font-size: 100px;
+    color: #df2008;
+    line-height: 1;
+}
+.banner .price-block {
+    width: 460px;
+    height: 130px;
+    margin-top: 15px;
+    border: 3px solid #bfbfbf;
+    text-align: center;
+}
+.banner .price-block p {
+    font-family: "Roboto Condensed Regular", sans-serif;
+    font-size: 19px;
+    color: #0090ae;
+    padding-top: 15px;
+}
+.banner .price-block .old-price, .banner .price-block .current-price {
+    display: inline-block;
+    margin: 15px 10px 0;
+    vertical-align: middle;
+}
+.banner .price-block .old-price span {
+    font-family: "Roboto Condensed Regular", sans-serif;
+    font-size: 25px;
+    color: #666666;
+    text-decoration: line-through;
+    line-height: 53px;
+}
+.banner .price-block .current-price span {
+    font-family: "Roboto Bold", sans-serif;
+    color: #0090ae;
+    font-size: 53px;
+    line-height: 1;
 }
 
 /* footer */
@@ -448,6 +518,22 @@ nav ul li a:hover {
 }
 .footer .block-content {
     padding: 20px 0;
+}
+.footer .links {
+    margin: 25px 0;
+    text-align: left;
+}
+.footer .links li {
+    display: inline-block;
+    vertical-align: top;
+    width: 290px;
+    margin: 10px;
+    text-align: left;
+}
+.footer .links li a {
+    font-size: 16px;
+    color: #017caa;
+    text-decoration: none;
 }
 .social li {
     margin: 0 30px 40px;
@@ -479,7 +565,7 @@ nav ul li a:hover {
     margin-right: 20px;
     text-decoration: none;
 }
-.footer .footer-links a:hover {
+.footer .footer-links a:hover, .footer ul li a:hover {
     text-decoration: underline;
 }
 .footer .footer-links {
@@ -487,9 +573,19 @@ nav ul li a:hover {
 }
 
 /* media-queries */
+@media (max-width: 1440px) {
+    .girl-image {
+        background: url('../images/new-girl.png') no-repeat 80% center;
+        background-size: auto 100%;
+    }
+}
 @media (max-width: 1080px) {
+    .girl-image {
+        background: url('../images/new-girl.png') no-repeat 90% center;
+        background-size: auto 100%;
+    }
     .header {
-        padding: 20px 0 0 0;
+        padding: 0;
         position: relative;
     }
     .nav-icon {
@@ -499,9 +595,9 @@ nav ul li a:hover {
         width: 200px;
         text-align: left;
         position: absolute;
-        right: 0px;
+        right: 0;
         top: 60px;
-        background: rgba(5, 147, 230, 0.8);
+        background: rgba(25, 187, 221, 0.5);
         -webkit-transition: 1s;
         -moz-transition: 1s;
         -ms-transition: 1s;
@@ -523,10 +619,18 @@ nav ul li a:hover {
         margin: 20px;
         float: none;
     }
+    .footer .links {
+        text-align: center;
+    }
 }
 
 @media (max-width: 960px) {
-
+    .girl-image {
+        display: none;
+    }
+    .banner .block-content {
+        padding: 40px 0 70px 20%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -535,7 +639,7 @@ nav ul li a:hover {
 
 @media (max-width: 640px) {
     .header {
-        padding: 20px 0;
+        padding: 0 0 20px;
     }
     .logo, .phone-block {
         display: block;
@@ -544,13 +648,106 @@ nav ul li a:hover {
     h1 {
         font-size: 32px;
     }
+    .banner .block-content {
+        padding: 40px 0 70px 10%;
+    }
+    .header-top a {
+        width: 100%;
+        float: none;
+    }
+    nav ul {
+        top: 120px;
+    }
+    .nav-icon {
+        top: 135px;
+    }
+
+}
+@media (max-width: 540px) {
+    .banner .block-content {
+        padding: 40px 10px 70px;
+    }
+    .banner .title {
+        font-size: 44px;
+    }
+    .banner .text {
+        width: 200px;
+        font-size: 26px;
+    }
+    .banner .percent {
+        font-size: 86px;
+    }
+    .first-block {
+        padding: 20px;
+    }
+    .first-block .block-content {
+        padding: 15px 10px;
+    }
 }
 
 @media (max-width: 480px) {
-    .header {
-        padding-top: 50px;
-    }
     .social li {
         margin: 0 10px;
     }
+    .banner .title {
+        font-size: 32px;
+    }
+    .banner .text {
+        width: 170px;
+        font-size: 22px;
+    }
+    .banner .percent {
+        font-size: 64px;
+    }
+    .banner .price-block {
+        width: 100%;
+        height: 120px;
+    }
+    .banner .price-block p {
+        font-size: 18px;
+    }
+    .banner .price-block .old-price span {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .banner .price-block .current-price span {
+        font-size: 36px;
+    }
+    .banner .block-content {
+        padding: 20px 10px 35px;
+    }
+    .courses h2 {
+        font-size: 24px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    .first-block p, .first-block ul li p {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .banner .title {
+        font-size: 28px;
+    }
+    .banner .text {
+        width: 160px;
+        font-size: 20px;
+    }
+    .banner .percent {
+        font-size: 52px;
+    }
+    .banner .price-block {
+        width: 100%;
+        height: 110px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .first-block p, .first-block ul li p {
+        font-size: 12px;
+    }
+
 }
