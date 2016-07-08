@@ -282,7 +282,7 @@ nav ul li a:hover {
     height: 50px;
     position: absolute;
     left: 1px;
-    top: 0;
+    top: 1px;
     background: #ffffff;
     z-index: 1;
     -webkit-border-radius: 5px;
@@ -304,28 +304,28 @@ nav ul li a:hover {
     display: block;
     width: 228px;
     height: 159px;
-    background: #65caff;
     position: relative;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
+    padding: 1px;
+    overflow: hidden;
 }
 .course-card .icon-course img {
     display: block;
-    width: 100px;
+    width: auto;
     height: auto;
-    margin: auto;
+    margin: 0;
     position: absolute;
     left: 0;
-    right: 0;
     top: 0;
-    bottom: 0;
 }
 .course-card .title {
     display: inline-block;
     font-family: "Muse-700", sans-serif;
     font-size: 17px;
     padding: 15px 12px 5px 12px;
+    text-decoration: none;
 }
 .course-card .title:hover {
     text-decoration: underline;
