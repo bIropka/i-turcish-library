@@ -259,11 +259,21 @@ nav ul li a:hover {
 /* courses */
 .courses {
     padding-top: 5%;
+    text-align: left;
 }
 .courses h2 {
     margin-bottom: 40px;
 }
+.courses ul:after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
 .courses .course-card {
+    display: block;
+    float: left;
+    list-style: none;
     position: relative;
     vertical-align: top;
     width: 230px;
@@ -275,6 +285,9 @@ nav ul li a:hover {
     border-radius: 5px;
     margin: 5px 3px;
     text-align: left;
+}
+.courses .course-card.hidden {
+    display: none;
 }
 .course-card .date-mark {
     display: block;
@@ -398,7 +411,7 @@ nav ul li a:hover {
 
 .courses>button {
     display: block;
-    margin: 80px auto 0;
+    margin: 50px auto 0;
     width: 245px;
     height: 50px;
     background: #19bbdd;
@@ -417,7 +430,7 @@ nav ul li a:hover {
     right: 45px;
     top: 0;
     bottom: 0;
-    background: url('../images/sprite-arrows.png') no-repeat right center;
+    background: url('../images/sprite-arrows.png') no-repeat left center;
     background-size: cover;
 }
 .courses>button:hover {
@@ -435,7 +448,7 @@ nav ul li a:hover {
     display: block;
 }
 .courses>button.active:after {
-    background: url('../images/sprite-arrows.png') no-repeat left center;
+    background: url('../images/sprite-arrows.png') no-repeat right center;
     background-size: cover;
 }
 

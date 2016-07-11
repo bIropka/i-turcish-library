@@ -13,7 +13,7 @@ $(document).ready(function () {
     $('.courses>button').click(function() {
         $(this).toggleClass('active');
         $(this).find('span').toggleClass('visible');
-        $(this).siblings('ul').slideToggle(400);
+        $(this).siblings('ul').find('.hidden').slideToggle(400);
     });
 
     /** end of script for courses**/
